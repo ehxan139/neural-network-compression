@@ -10,7 +10,7 @@ Comprehensive implementation of three state-of-the-art neural network compressio
 
 ---
 
-## 🎯 Business Impact
+## Business Impact
 
 ### Problem Statement
 
@@ -51,7 +51,7 @@ This toolkit provides three complementary compression methods:
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -163,7 +163,7 @@ decomposer.fine_tune(
 
 ---
 
-## 📊 Comprehensive Benchmark Results
+## Comprehensive Benchmark Results
 
 ### CIFAR-10 Dataset (Image Classification)
 
@@ -186,7 +186,7 @@ decomposer.fine_tune(
 | **Gradual Pruning (85%)** | 14.7 | 94.7% | 8.2 | **6.7x** | **3.5x** |
 | **Low-Rank Factorization** | 39.1 | 95.1% | 14.2 | **2.5x** | **2.0x** |
 
-*Hardware: NVIDIA GeForce RTX 3080, CUDA 11.8, PyTorch 2.0*  
+*Hardware: NVIDIA GeForce RTX 3080, CUDA 11.8, PyTorch 2.0*
 *Mobile benchmarks: iPhone 13 Pro (A15 Bionic), Android Samsung S21 (Snapdragon 888)*
 
 ### Real-World Application: Mobile Object Detection
@@ -230,9 +230,9 @@ L_hard = CrossEntropy(student_logits, true_labels)
 - **Student Architecture**: 10-20% of teacher size
 
 **When to Use**:
-- ✅ Need maximum compression with minimal accuracy loss
-- ✅ Have pre-trained large model available
-- ✅ Can afford training time (1-2x baseline training)
+- Need maximum compression with minimal accuracy loss
+- Have pre-trained large model available
+- Can afford training time (1-2x baseline training)
 - ❌ Don't have access to original training data
 
 **Best Practices**:
@@ -265,9 +265,9 @@ t = current step
 - **Structured**: Remove entire channels/neurons (hardware-friendly)
 
 **When to Use**:
-- ✅ Need to deploy on hardware supporting sparse operations
-- ✅ Want interpretable model (fewer connections)
-- ✅ Can fine-tune model during compression
+- Need to deploy on hardware supporting sparse operations
+- Want interpretable model (fewer connections)
+- Can fine-tune model during compression
 - ❌ Target hardware doesn't benefit from sparsity (some mobile chips)
 
 **Best Practices**:
@@ -295,7 +295,7 @@ Factorized parameters: m×r + r×n (where r << min(m,n))
 
 **Layer-Specific Strategies**:
 - **Fully Connected**: Direct SVD on weight matrix
-- **Convolutional**: 
+- **Convolutional**:
   - Channel decomposition: W^(k×k×c×d) → W1^(k×k×c×r) × W2^(1×1×r×d)
   - Spatial decomposition: W^(k×k) → W1^(k×1) × W2^(1×k)
 
@@ -305,9 +305,9 @@ Factorized parameters: m×r + r×n (where r << min(m,n))
 3. **Layer-wise Search**: Optimize rank per layer via validation
 
 **When to Use**:
-- ✅ Model has large fully-connected layers
-- ✅ Want guaranteed speedup on all hardware
-- ✅ Need moderate compression (2-4x)
+- Model has large fully-connected layers
+- Want guaranteed speedup on all hardware
+- Need moderate compression (2-4x)
 - ❌ Model already heavily uses 1×1 convolutions
 
 **Best Practices**:
@@ -318,7 +318,7 @@ Factorized parameters: m×r + r×n (where r << min(m,n))
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 neural-network-compression/
@@ -374,7 +374,7 @@ neural-network-compression/
 
 ---
 
-## 🎓 Methodology
+## Methodology
 
 ### Knowledge Distillation Process
 
@@ -457,7 +457,7 @@ neural-network-compression/
 
 ---
 
-## 🔧 Advanced Usage
+## Advanced Usage
 
 ### Combined Compression (Maximum Compression)
 
@@ -535,7 +535,7 @@ compressed = decomposer.decompose()
 
 ---
 
-## 📈 Benchmarking
+## Benchmarking
 
 ### Run Full Benchmark Suite
 
@@ -586,7 +586,7 @@ profiler.profile(test_loader)
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 ### Export for Mobile (ONNX)
 
@@ -632,7 +632,7 @@ curl -X POST http://localhost:8080/predictions/compressed_classifier -T test_ima
 
 ---
 
-## 📚 Resources & References
+## Resources & References
 
 ### Research Papers
 
@@ -673,7 +673,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🎯 Use Cases & Success Stories
+## Use Cases & Success Stories
 
 ### Case Study 1: Mobile Face Recognition App
 
@@ -734,8 +734,8 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## 📞 Contact
 
-**Author**: Ehsan Ul Haq  
-**GitHub**: [@ehxan139](https://github.com/ehxan139)  
+**Author**: Ehsan Ul Haq
+**GitHub**: [@ehxan139](https://github.com/ehxan139)
 **Portfolio**: [github.com/ehxan139](https://github.com/ehxan139)
 
 For questions, issues, or collaboration opportunities, please open an issue on GitHub.
